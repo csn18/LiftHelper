@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;800&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+body > h1, h2{
+    text-align: center;
+    color: #fff;
+}
+
+a{
+    color: #4ba2c7;
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+input:focus,
+textarea:focus{
+    border: #4ba2c7 2px solid;
+}
+
+.description{
+    text-align: center;
+    text-transform: uppercase;
+    color: #4ba2c7;
+    width: 30%;
+    margin: auto;
+    opacity: 0.6;
+}
+
+body{
+    background-color: #1e1f23;
+}
+
+
+
+.item .kata-id,
+.item .date,
+.item a{
+    color: #67c74b;
+}
+
+.item-fail .kata-id,
+.item-fail .date,
+.item-fail a{
+    color: #c74b4b;
+}
+
+
+.date span{
+    font-weight: 400;
+}
+
+.item a,
+.item-fail a{
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+.score{
+    color: #67c74b;
+    text-align: left;
+}
+
+.fails{
+    color: #4ba2c7;
+    text-align: left;
+}
+
+.username {
+    font-weight: 800;
+    color: white;
+}
+
+.item-fail a{
+    text-decoration: none;
+}
+
+label{
+    display: block;
+}
+
+button{
+    background-color: #4ba2c7;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+form{
+    width: 30%;
+    margin: 20px auto;
+}
+
+input, textarea, select{
+    transition: none;
+    background-color: #191a21;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.user-info > *{
+    text-decoration: none;
+    color: #c4c4c4;
+    font-weight: 400;
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.item{
+    background-color: #446c35;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-fail{
+    background-color: #6c3535;
+    padding:10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-fail .right-side{
+    background-image: url("../../staticfiles/close.svg");
+}
+
+.item .right-side{
+    background-image: url("../../staticfiles/check.svg");
+    color: red;
+}
+
+.left-side{
+    width: 90%;
+}
+
+.right-side{
+    width: 10%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu{
+    background: #151519;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a{
+    color: white;
+    margin: 5px 20px;
+    display: inline-block;
+}
+
+input{
+    display: block;
+}
+
+body > p{
+    color: white;
+    text-align: center;
+}
+
+.group{
+    width: 45%;
+    text-align: center;
+    background: #191a21;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.group span{
+    font-weight: 400;
+    display: block;
+}
+
+.member{
+    background: #191a21;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+.members{
+    width: 50%;
+    margin: 50px auto;
+}
+
+.user{
+    color: white;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+}
+
+.user > div{
+    background: #191a21;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius:10px;
+}
+
+.progress span{
+    font-weight: 800;
+}
+
+.sub-info{
+    color: gray;
+}
+
+.member-link{
+    display: block;
+    width: 100%;
+}
+
+.wrapper{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.groups{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
