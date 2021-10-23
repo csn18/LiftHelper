@@ -1,0 +1,17 @@
+{% extends 'account/base.html' %}
+
+{% block content %}
+    <div class="members">
+        {% for member in members %}
+            <a class="member-link" href="{% url 'member-detail' member.id %}">
+                <div class="member">
+                    <div class="info">
+                        <h3>{{ member.member_name }}</h3>
+                        <p>Прогресс <span>{{ member.progress }}%</span></p>
+                        <p class="sub-info">{{ member.member_division }} | {{ member.member_group }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

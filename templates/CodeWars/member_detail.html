@@ -1,0 +1,16 @@
+{% extends 'account/base.html' %}
+
+{% block content %}
+    <div class="user">
+        <div class="user-info">
+            <h2>{{ member.member_name }} | {{ member.member_group }}</h2>
+            <p>Подразделение {{ member.member_division }}</p>
+            <p>CodeWars аккаунт {{ member.code_wars_username }}</p>
+        </div>
+        <div class="tasks">
+            <p>Всего задач {{ count_all_task }} поставлено</p>
+            <p>Задач решено {{ count_completed_task }}</p>
+            <p class="progress">Общий прогресс <span>{{ progress }}%</span></p>
+        </div>
+    </div>
+{% endblock %}

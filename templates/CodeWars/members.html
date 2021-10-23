@@ -1,0 +1,27 @@
+{% extends 'account/base.html' %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <div class="groups">
+            {% for group in groups %}
+                <div class="group">
+                    <a href="{% url 'group' group.id %}">
+                        <h3>{{ group.name_group }} <span>{{ group.start_date }}</span></h3>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h2>Добавить участника</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.member_name }}
+            {{ form.member_division }}
+            {{ form.member_group }}
+            {{ form.code_wars_username }}
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+{% endblock %}
