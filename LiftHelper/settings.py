@@ -20,9 +20,6 @@ INSTALLED_APPS = [
 
     'Main.apps.MainConfig',
     'CodeWarsHelper.apps.CodeWarsHelperConfig',
-    
-    'allauth',
-    'allauth.account',
 
     'psycopg2',
 ]
@@ -104,8 +101,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-LOGIN_REDIRECT_URL = ''
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SITE_ID = 1

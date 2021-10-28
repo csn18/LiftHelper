@@ -22,6 +22,21 @@
             {{ form.code_wars_username }}
             <button type="submit">Добавить</button>
         </form>
+
+        <h2>Добавить подразделение</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form_submissions.division_name }}
+            <button type="submit">Добавить</button>
+        </form>
+
+        <h2>Добавить поток</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form_groups.name_group }}
+            {{ form_groups.start_date }}
+            <button type="submit">Добавить</button>
+        </form>
     </div>
 
 {% endblock %}

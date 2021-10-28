@@ -1,7 +1,7 @@
 from django.contrib.sites import requests
 from django.shortcuts import render, redirect
 
-from CodeWarsHelper.forms import MemberForm
+from CodeWarsHelper.forms import MemberForm, SubdivisionForm, GroupForm
 from CodeWarsHelper.models import CodeWarsTasks, Members, Group
 
 
@@ -9,13 +9,29 @@ def main_members(request):
     # Get all groups
     groups = Group.objects.all()
 
+    # Add Groups
+    form_groups = GroupForm()
+    if request.method == 'POST' and GroupForm(request.POST) is not None:
+        form_groups = GroupForm(request.POST)
+        if form_groups.is_valid():
+            form_groups.save()
+            return redirect('main-members')
+
+    # Add Subdivision
+    form_submissions = SubdivisionForm()
+    if request.method == 'POST' and SubdivisionForm(request.POST) is not None:
+        form_submissions = SubdivisionForm(request.POST)
+        if form_submissions.is_valid():
+            form_submissions.save()
+            return redirect('main-members')
+
     # Add new user form
     form = MemberForm()
-    if request.method == 'POST':
+    if request.method == 'POST' and MemberForm(request.POST) is not None:
         form = MemberForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('group')
+            return redirect('main-members')
     return render(request, 'CodeWars/members.html', locals())
 
 
