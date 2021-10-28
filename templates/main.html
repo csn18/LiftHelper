@@ -1,9 +1,21 @@
-{% extends 'account/base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="{% url 'login' %}">Логин</a>
+    </div>
 
-{% block title %}
-    CodeWars Helper
-{% endblock %}
-
-{% block content %}
-    <h1>Main page</h1>
-{% endblock %}
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>

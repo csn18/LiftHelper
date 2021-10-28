@@ -16,7 +16,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
 
     'Main.apps.MainConfig',
     'CodeWarsHelper.apps.CodeWarsHelperConfig',
@@ -24,10 +23,6 @@ INSTALLED_APPS = [
     'psycopg2',
 ]
 
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend'
-)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
