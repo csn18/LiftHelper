@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.username }}
+        {{ form.email }}
+        {{ form.password }}
+        {{ form.confirm_password }}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+{% endblock %}
